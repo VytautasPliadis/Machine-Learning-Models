@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "vypliadpoetry env use python3.8"
+version = "0.1.0"
+description = ""
+authors = ["Vytautas Pliadis <vytautas.pliadis@gmail.com>"]
+readme = "README.md"
+packages = [{include = "vypliad_de2v2"}]
+
+[tool.poetry.dependencies]
+python = "3.8.10"
+sktime = "^0.27.0"
+pmdarima = "^2.0.4"
+fastapi = "^0.110.0"
+uvicorn = "^0.28.0"
+joblib = "^1.3.2"
+sqlalchemy = "^2.0.28"
+aiohttp = "^3.9.3"
+python-dotenv = "^1.0.1"
+psycopg2-binary = "^2.9.9"
+black = "^24.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
