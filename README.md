@@ -90,3 +90,11 @@ psql -U {DB_USER} -d {DB_NAME}
 select * from analytics_data;
 select * from ml_train_data;
 ```
+## Machine Learning Model Integration
+
+In the core of this project lies the implementation of ARIMA (Autoregressive Integrated Moving Average) models for forecasting precious metals prices. ARIMA models are well-regarded for their ability to model and predict time series data with a degree of accuracy that's useful for practical applications. Here's a straightforward overview of the machine learning aspect:
+
+- Data Handling: Dataset is prepared for the ARIMA models by either generating synthetic data with predefined characteristics or pulling historical price data from database. This process ensures that the models have access to relevant data for both training and validation purposes.
+- Model Training: Each metal is represented by a unique identifier or 'ticker,' for which a distinct ARIMA model is trained. The training involves fitting the model to the historical data of each metal, aiming to capture the underlying trends and patterns in price movements.
+- Saving and Loading Models: After training, models are saved to disk, making it easy to manage and reuse them without the need for retraining. This step is crucial for operational efficiency and allows for quick model deployment when needed.
+- Forecasting: For predictions, the system uses the trained ARIMA models to forecast future prices for a specified number of steps ahead. The forecasts are intended to be straightforward and actionable, providing users with a set of predicted values that can aid in decision-making.
